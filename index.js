@@ -5,20 +5,16 @@ let amPm = document.querySelector("#am-pm");
 
 function digitalClock(){
   let date = new Date();
-  let h = (date.getHours()<10) ?"0"+ `${date.getHours()}` : date.getHours();
-  let m = (date.getMinutes()<10) ?"0"+ `${date.getMinutes()}` : date.getMinutes();
-  let s = (date.getSeconds()<10) ?"0"+ `${date.getSeconds()}` : date.getSeconds();
-  hours.textContent = h ;
-  minutes.textContent = m
-  seconds.textContent = s 
+  let h = date.getHours();
+  let m = date.getMinutes();
+  let s = date.getSeconds();
   if(h>12){
-    if(amPm.textContent =="AM"){
-      amPm.textContent = "PM"
-    }
-    else{
-      amPm.textContent = "AM"
-    }
+    h = h - 12;
+    amPm.textContent = "PM"
   }
+  hours.textContent = (h<10) ?"0"+ `${h}` : h;
+  minutes.textContent = (m<10) ?"0"+ `${m}` : m;
+  seconds.textContent = (s<10) ?"0"+ `${s}` : s;
 
   setInterval(digitalClock, 1000);
 }
