@@ -1,0 +1,62 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items:center ;
+  justify-content:flex-end;
+  min-height: 100vh;
+  background-image: url("./Images/nathan-dumlao-LPRrEJU2GbQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Electrolize', sans-serif;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 10%;
+
+}
+.digital-clock{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content:center;
+  margin-top: 20px;
+  font-size: 35px;
+  /* line-height: 35px; */
+  
+}
+.digital-clock span{
+  margin-inline: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(99, 26, 41, 0.2);
+  width: 120px;
+  height: 80px;
+ 
+}
+.digital-clock .text{
+  font-size: 12px;
+  height: 40px;
+  background: rgba(73, 20, 30, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+.digital-clock #am-pm{
+  font-size: 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgba(73, 20, 30, 0.4);;
+}
